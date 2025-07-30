@@ -1,4 +1,4 @@
-package com.sargis.khlopuzyan.advancedandroid.messageQueue_threadPool.messageQueue
+package com.sargis.khlopuzyan.advancedandroid.handler_looper_thread_handlerThread_threadPool_messageQueue.messageQueue_threadPool_IMPORTANT.messageQueue
 
 fun main() {
     val messageQueue = MessageQueue()

@@ -1,4 +1,4 @@
-package com.sargis.khlopuzyan.advancedandroid.messageQueue_threadPool.messageQueue
+package com.sargis.khlopuzyan.advancedandroid.handler_looper_thread_handlerThread_threadPool_messageQueue.messageQueue_threadPool_IMPORTANT.messageQueue
 
 // TODO-URL: https://medium.com/@qingzhong/the-message-queue-design-weve-been-missing-in-android-development-b9dc10ea45c7
 class MessageQueue {

@@ -1,5 +1,6 @@
 package com.sargis.khlopuzyan.advancedandroid.messageQueue_threadPool.messageQueue
 
+// TODO-URL: https://medium.com/@qingzhong/the-message-queue-design-weve-been-missing-in-android-development-b9dc10ea45c7
 class MessageQueue {
 
     // We need to maintain two "dummy" messages for head and tail.

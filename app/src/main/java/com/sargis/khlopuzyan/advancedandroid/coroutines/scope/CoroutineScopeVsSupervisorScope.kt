@@ -1,4 +1,4 @@
-package com.sargis.khlopuzyan.advancedandroid.coroutines
+package com.sargis.khlopuzyan.advancedandroid.coroutines.scope
 
 import kotlinx.coroutines.async
 import kotlinx.coroutines.delay

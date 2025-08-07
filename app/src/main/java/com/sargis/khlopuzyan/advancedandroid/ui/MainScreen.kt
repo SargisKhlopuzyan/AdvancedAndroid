@@ -75,6 +75,15 @@ fun MainScreen(navController: NavController) {
                     }
                 )
             }
+
+            item {
+                LazyGridItem(
+                    text = "Custom ViewModel",
+                    onClick = {
+                        navController.navigate(MainScreens.CustomViewModel.route)
+                    }
+                )
+            }
         }
     }
 }

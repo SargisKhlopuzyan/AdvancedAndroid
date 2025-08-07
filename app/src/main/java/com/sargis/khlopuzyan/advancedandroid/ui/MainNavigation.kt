@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.sargis.khlopuzyan.advancedandroid.viewmodel.CustomViewModelCompose
 
 @Composable
 fun MainNavigation() {
@@ -23,6 +24,9 @@ fun MainNavigation() {
         }
         composable(route = MainScreens.EffectHandler.route) {
 
+        }
+        composable(route = MainScreens.CustomViewModel.route) {
+            CustomViewModelCompose()
         }
     }
 }

@@ -4,7 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.sargis.khlopuzyan.advancedandroid.viewmodel.CustomViewModelCompose
+import com.sargis.khlopuzyan.advancedandroid.viewmodel.MyCompose
+import com.sargis.khlopuzyan.advancedandroid.viewmodel.savedStateHandler.MySavedStateHandlerCompose
 
 @Composable
 fun MainNavigation() {
@@ -26,7 +27,10 @@ fun MainNavigation() {
 
         }
         composable(route = MainScreens.CustomViewModel.route) {
-            CustomViewModelCompose()
+            MyCompose()
+        }
+        composable(route = MainScreens.CustomViewModelWithSavedStateHandler.route) {
+            MySavedStateHandlerCompose()
         }
     }
 }

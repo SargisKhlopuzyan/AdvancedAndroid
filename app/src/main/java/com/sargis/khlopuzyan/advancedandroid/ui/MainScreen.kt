@@ -84,6 +84,15 @@ fun MainScreen(navController: NavController) {
                     }
                 )
             }
+
+            item {
+                LazyGridItem(
+                    text = "Custom ViewModel with SavedStateHandler",
+                    onClick = {
+                        navController.navigate(MainScreens.CustomViewModelWithSavedStateHandler.route)
+                    }
+                )
+            }
         }
     }
 }

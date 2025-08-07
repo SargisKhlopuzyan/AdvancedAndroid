@@ -9,7 +9,7 @@ import kotlin.random.Random
 
 //TODO-URL: https://www.youtube.com/watch?v=9sqvBydNJSg&ab_channel=PhilippLackner
 //TODO-URL: https://www.youtube.com/watch?v=nNv1a0nmOfk&ab_channel=SagarMalhotra
-class CustomViewModel(
+class MyViewModel(
     defaultColor: Color
 ) : ViewModel() {
 

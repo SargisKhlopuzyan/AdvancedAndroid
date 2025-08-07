@@ -1,4 +1,4 @@
-package com.sargis.khlopuzyan.advancedandroid.viewmodel
+package com.sargis.khlopuzyan.advancedandroid.viewmodel.savedStateHandler
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
@@ -10,27 +10,35 @@ import androidx.compose.material3.Button
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.compose.collectAsStateWithLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.sargis.khlopuzyan.advancedandroid.viewmodel.generateRandomColor
 
 @Composable
-fun CustomViewModelCompose() {
+fun MySavedStateHandlerCompose() {
 
-//    val customViewModel: CustomViewModel = CustomViewModel()
-//    val customViewModel: CustomViewModel = viewModel<CustomViewModel>()
-    val customViewModel: CustomViewModel = viewModel<CustomViewModel>(
-        factory = object : ViewModelProvider.Factory {
-            override fun <T : ViewModel> create(modelClass: Class<T>): T {
-                return CustomViewModel(generateRandomColor()) as T
+//    val mySavedStateHandleViewModel: MySavedStateHandleViewModel = MySavedStateHandleViewModel()
+//    val mySavedStateHandleViewModel: MySavedStateHandleViewModel = viewModel<MySavedStateHandleViewModel>()
+    val mySavedStateHandleViewModel: MySavedStateHandleViewModel =
+        viewModel<MySavedStateHandleViewModel>(
+            factory = object : ViewModelProvider.Factory {
+                override fun <T : ViewModel> create(modelClass: Class<T>): T {
+                    return MySavedStateHandleViewModel(
+                        defaultColor = generateRandomColor(),
+                        savedStateHandle = SavedStateHandle()
+                    ) as T
+                }
             }
-        }
-    )
+        )
 
-    val color = customViewModel.backgroundColor
+    val color by mySavedStateHandleViewModel.backgroundColor.collectAsStateWithLifecycle()
 
     Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
         Column(
@@ -45,7 +53,7 @@ fun CustomViewModelCompose() {
                 modifier = Modifier
                     .wrapContentSize(),
                 onClick = {
-                    customViewModel.changeBackgroundColor()
+                    mySavedStateHandleViewModel.changeBackgroundColor()
                 }
             ) {
                 Text(

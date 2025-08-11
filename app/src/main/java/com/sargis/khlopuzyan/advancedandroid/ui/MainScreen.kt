@@ -51,9 +51,9 @@ fun MainScreen(navController: NavController) {
         ) {
             item {
                 LazyGridItem(
-                    text = "Effect handler",
+                    text = "Effect Handlers",
                     onClick = {
-                        navController.navigate(MainScreens.EffectHandler.route)
+                        navController.navigate(MainScreens.EffectHandlers.route)
                     }
                 )
             }

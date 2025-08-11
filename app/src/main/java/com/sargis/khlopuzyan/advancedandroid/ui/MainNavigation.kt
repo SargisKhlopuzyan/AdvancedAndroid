@@ -4,6 +4,7 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
+import com.sargis.khlopuzyan.advancedandroid.effectHandlers_2.EffectHandlers
 import com.sargis.khlopuzyan.advancedandroid.viewmodel.MyCompose
 import com.sargis.khlopuzyan.advancedandroid.viewmodel.savedStateHandler.MySavedStateHandlerCompose
 
@@ -23,8 +24,8 @@ fun MainNavigation() {
         composable(route = MainScreens.Continuation.route) {
 
         }
-        composable(route = MainScreens.EffectHandler.route) {
-
+        composable(route = MainScreens.EffectHandlers.route) {
+            EffectHandlers()
         }
         composable(route = MainScreens.CustomViewModel.route) {
             MyCompose()

@@ -7,5 +7,6 @@ sealed class MainScreens(val route: String) {
     object ThreadHandlerLooperThreadPool: MainScreens("thread_handler_looper_thread_pool")
     object CustomViewModel: MainScreens("custom_view_model")
     object CustomViewModelWithSavedStateHandler: MainScreens("custom_view_model_with_saved_state_handler")
-    object ForegroundServiceScreen: MainScreens("foreground_service_screen")
+    object ForegroundService: MainScreens("foreground_service")
+    object WorkManager: MainScreens("work_manager")
 }

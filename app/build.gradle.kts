@@ -58,6 +58,14 @@ dependencies {
     // PL_JetpackCompose - PERMISSIONS
     implementation(libs.accompanist.permissions)
 
+    // WorkManager
+    implementation(libs.androidx.work.runtime.ktx)
+
+    // Coil
+    implementation(libs.coil.compose)
+
+    implementation("androidx.compose.runtime:runtime-livedata:1.8.3")
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

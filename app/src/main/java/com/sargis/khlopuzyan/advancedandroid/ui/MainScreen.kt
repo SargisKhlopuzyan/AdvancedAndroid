@@ -98,7 +98,16 @@ fun MainScreen(navController: NavController) {
                 LazyGridItem(
                     text = "Foreground Service",
                     onClick = {
-                        navController.navigate(MainScreens.ForegroundServiceScreen.route)
+                        navController.navigate(MainScreens.ForegroundService.route)
+                    }
+                )
+            }
+
+            item {
+                LazyGridItem(
+                    text = "Work Manager",
+                    onClick = {
+                        navController.navigate(MainScreens.WorkManager.route)
                     }
                 )
             }

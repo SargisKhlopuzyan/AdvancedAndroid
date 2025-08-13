@@ -8,6 +8,7 @@ import com.sargis.khlopuzyan.advancedandroid.effectHandlers_2.EffectHandlers
 import com.sargis.khlopuzyan.advancedandroid.service.ServiceScreen
 import com.sargis.khlopuzyan.advancedandroid.viewmodel.MyCompose
 import com.sargis.khlopuzyan.advancedandroid.viewmodel.savedStateHandler.MySavedStateHandlerCompose
+import com.sargis.khlopuzyan.advancedandroid.workManager.WorkManagerScreen
 
 @Composable
 fun MainNavigation() {
@@ -34,8 +35,11 @@ fun MainNavigation() {
         composable(route = MainScreens.CustomViewModelWithSavedStateHandler.route) {
             MySavedStateHandlerCompose()
         }
-        composable(route = MainScreens.ForegroundServiceScreen.route) {
+        composable(route = MainScreens.ForegroundService.route) {
             ServiceScreen()
+        }
+        composable(route = MainScreens.WorkManager.route) {
+            WorkManagerScreen()
         }
     }
 }

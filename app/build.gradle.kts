@@ -55,6 +55,9 @@ dependencies {
     // NAVIGATION
     implementation(libs.androidx.navigation.compose)
 
+    // PL_JetpackCompose - PERMISSIONS
+    implementation(libs.accompanist.permissions)
+
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)

@@ -93,6 +93,15 @@ fun MainScreen(navController: NavController) {
                     }
                 )
             }
+
+            item {
+                LazyGridItem(
+                    text = "Foreground Service",
+                    onClick = {
+                        navController.navigate(MainScreens.ForegroundServiceScreen.route)
+                    }
+                )
+            }
         }
     }
 }

@@ -18,7 +18,7 @@ fun main() {
 }
 
 //TODO-URL: https://medium.com/@vijimscse/thread-looper-handler-thread-android-kotlin-c6edb9a8faec
-class HandlerThread(name: String = "Handler Thread") : Thread(name) {
+private class HandlerThread(name: String = "Handler Thread") : Thread(name) {
 
     val looper: Looper?
         get() = Looper.myLooper()
@@ -31,7 +31,7 @@ class HandlerThread(name: String = "Handler Thread") : Thread(name) {
     }
 }
 
-class CustomHandler(looper: Looper) : Handler(looper) {
+private class CustomHandler(looper: Looper) : Handler(looper) {
     override fun handleMessage(msg: Message) {
         super.handleMessage(msg)
         println("LOG_TAG_CustomHandler_handleMessage_ Message: ${msg.what}")

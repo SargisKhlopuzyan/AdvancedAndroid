@@ -5,6 +5,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.sargis.khlopuzyan.advancedandroid.effectHandlers_2.EffectHandlers
+import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_threadPool_messageQueue_2.HandlerLooperThreadHandlerThreadThreadPoolMessageQueue
 import com.sargis.khlopuzyan.advancedandroid.service.ServiceScreen
 import com.sargis.khlopuzyan.advancedandroid.viewmodel.MyCompose
 import com.sargis.khlopuzyan.advancedandroid.viewmodel.savedStateHandler.MySavedStateHandlerCompose
@@ -21,7 +22,7 @@ fun MainNavigation() {
             MainScreen(navController)
         }
         composable(route = MainScreens.ThreadHandlerLooperThreadPool.route) {
-
+            HandlerLooperThreadHandlerThreadThreadPoolMessageQueue()
         }
         composable(route = MainScreens.Continuation.route) {
 

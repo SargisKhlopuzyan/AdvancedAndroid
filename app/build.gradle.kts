@@ -6,12 +6,12 @@ plugins {
 
 android {
     namespace = "com.sargis.khlopuzyan.advancedandroid"
-    compileSdk = 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId = "com.sargis.khlopuzyan.advancedandroid"
         minSdk = 24
-        targetSdk = 35
+        targetSdk = 36
         versionCode = 1
         versionName = "1.0"
 
@@ -64,7 +64,7 @@ dependencies {
     // Coil
     implementation(libs.coil.compose)
 
-    implementation("androidx.compose.runtime:runtime-livedata:1.8.3")
+    implementation("androidx.compose.runtime:runtime-livedata:1.9.0")
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

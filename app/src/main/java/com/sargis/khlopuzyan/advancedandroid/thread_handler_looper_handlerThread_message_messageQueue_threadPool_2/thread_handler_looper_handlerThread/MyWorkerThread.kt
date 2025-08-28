@@ -1,4 +1,4 @@
-package com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_threadPool_messageQueue_2.thread_handler_looper_handlerThread
+package com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.thread_handler_looper_handlerThread
 
 import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.atomic.AtomicBoolean

@@ -1,4 +1,4 @@
-package com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_threadPool_messageQueue_2
+package com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2
 
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
@@ -9,8 +9,10 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_threadPool_messageQueue_2.thread_handler_looper_handlerThread.HandlerWorkerThread
-import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_threadPool_messageQueue_2.thread_handler_looper_handlerThread.LooperWorkerThread
+import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.messageQueue.messageAndMessageQueue
+import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.threadPool.threadPool
+import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.thread_handler_looper_handlerThread.HandlerWorkerThread
+import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.thread_handler_looper_handlerThread.LooperWorkerThread
 
 val looperWorkerThread = LooperWorkerThread()
 val handlerWorkerThread = HandlerWorkerThread()
@@ -41,6 +43,8 @@ fun HandlerLooperThreadHandlerThreadThreadPoolMessageQueue() {
                 Text(text = "Quit LooperWorkerThread")
             }
 
+            //////////////////////////////////////
+
             Button(onClick = {
                 handlerWorkerThread.execute {
                     // Do something
@@ -54,6 +58,8 @@ fun HandlerLooperThreadHandlerThreadThreadPoolMessageQueue() {
                 Text(text = "HandlerWorkerThread")
             }
 
+            /////////////////////////
+
             Button(onClick = {
                 customHandlerMain()
             }) {
@@ -64,6 +70,22 @@ fun HandlerLooperThreadHandlerThreadThreadPoolMessageQueue() {
                 customHandlerSendMessage()
             }) {
                 Text(text = "customHandlerSendMessage()")
+            }
+
+            ////////////////////////////
+
+            Button(onClick = {
+                messageAndMessageQueue()
+            }) {
+                Text(text = "messageAndMessageQueue()")
+            }
+
+            /////////////////////////////
+
+            Button(onClick = {
+                threadPool()
+            }) {
+                Text(text = "threadPool()")
             }
         }
     }

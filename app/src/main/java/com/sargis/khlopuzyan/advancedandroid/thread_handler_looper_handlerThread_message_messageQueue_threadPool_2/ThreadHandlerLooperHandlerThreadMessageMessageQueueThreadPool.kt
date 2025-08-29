@@ -11,11 +11,9 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.messageQueue.messageAndMessageQueue
 import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.threadPool.threadPool
-import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.thread_handler_looper_handlerThread.HandlerWorkerThread
-import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.thread_handler_looper_handlerThread.LooperWorkerThread
-
-val looperWorkerThread = LooperWorkerThread()
-val handlerWorkerThread = HandlerWorkerThread()
+import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.thread_handler_looper_handlerThread.handlerWorkerThread
+import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.thread_handler_looper_handlerThread.looperWorkerThread
+import com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool_2.thread_handler_looper_handlerThread.myWorkerThread
 
 @Composable
 fun HandlerLooperThreadHandlerThreadThreadPoolMessageQueue() {
@@ -25,37 +23,23 @@ fun HandlerLooperThreadHandlerThreadThreadPoolMessageQueue() {
             verticalArrangement = Arrangement.spacedBy(16.dp)
         ) {
             Button(onClick = {
-                looperWorkerThread.execute {
-                    // Do something
-                    println("LOG_TAG_execute_1 ${Thread.currentThread().name}")
-                }
-                looperWorkerThread.execute {
-                    // Do something else
-                    println("LOG_TAG_execute_2 ${Thread.currentThread().name}")
-                }
+                looperWorkerThread()
             }) {
-                Text(text = "LooperWorkerThread")
+                Text(text = "looperWorkerThread()")
             }
 
             Button(onClick = {
-                looperWorkerThread.quit()
+                myWorkerThread()
             }) {
-                Text(text = "Quit LooperWorkerThread")
+                Text(text = "myWorkerThread()")
             }
 
             //////////////////////////////////////
 
             Button(onClick = {
-                handlerWorkerThread.execute {
-                    // Do something
-                    println("LOG_TAG_handlerWorkerThread.execute_1 ${Thread.currentThread().name}")
-                }
-                handlerWorkerThread.execute {
-                    // Do something else
-                    println("LOG_TAG_handlerWorkerThread.execute_2 ${Thread.currentThread().name}")
-                }
+                handlerWorkerThread()
             }) {
-                Text(text = "HandlerWorkerThread")
+                Text(text = "handlerWorkerThread()")
             }
 
             /////////////////////////
@@ -63,7 +47,7 @@ fun HandlerLooperThreadHandlerThreadThreadPoolMessageQueue() {
             Button(onClick = {
                 customHandlerMain()
             }) {
-                Text(text = "customHandlerMain")
+                Text(text = "customHandlerMain()")
             }
 
             Button(onClick = {

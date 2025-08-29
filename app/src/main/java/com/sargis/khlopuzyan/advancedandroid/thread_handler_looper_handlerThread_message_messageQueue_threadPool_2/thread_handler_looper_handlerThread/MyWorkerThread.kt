@@ -5,17 +5,18 @@ import java.util.concurrent.atomic.AtomicBoolean
 
 //TODO-URL: https://mfallahpour.medium.com/android-loopers-and-handlers-demystified-481eef1f3984
 
-//fun main() {
-//    val myWorkerThread = MyWorkerThread()
-//    myWorkerThread.execute {
-//        // Do something
-//    }
-//    myWorkerThread.execute {
-//        // Do something else
-//    }
-//
-//    myWorkerThread.quite()
-//}
+fun myWorkerThread() {
+    val myWorkerThread = MyWorkerThread()
+    myWorkerThread.execute {
+        // Do something
+    }
+
+    myWorkerThread.execute {
+        // Do something else
+    }
+
+    myWorkerThread.quite()
+}
 
 class MyWorkerThread : Thread() {
 

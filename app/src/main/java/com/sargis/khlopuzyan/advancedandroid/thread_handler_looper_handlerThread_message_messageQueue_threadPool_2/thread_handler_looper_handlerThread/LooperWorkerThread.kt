@@ -2,26 +2,33 @@ package com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThrea
 
 import android.os.Handler
 import android.os.Looper
-import android.os.Message
 import android.util.Log
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.runBlocking
 
 //TODO-URL: https://mfallahpour.medium.com/android-loopers-and-handlers-demystified-481eef1f3984
 
-//fun main() {
-//    val looperWorkerThread = LooperWorkerThread()
-//    looperWorkerThread.execute {
-//        // Do something
-//        println("LOG_TAG_execute_1")
-//    }
-//    looperWorkerThread.execute {
-//        // Do something else
-//        println("LOG_TAG_execute_2")
-//    }
-//
-//    looperWorkerThread.quite()
-//}
+fun looperWorkerThread() {
+    val looperWorkerThread = LooperWorkerThread()
 
-class LooperWorkerThread: Thread("LooperWorkerThread") {
+    runBlocking {
+        delay(500)
+    }
+
+    looperWorkerThread.execute {
+        // Do something
+        Log.e("LOG_TAG", "looperWorkerThread.execute_1 ${Thread.currentThread().name}")
+    }
+
+    looperWorkerThread.execute {
+        // Do something else
+        Log.e("LOG_TAG", "looperWorkerThread.execute_2 ${Thread.currentThread().name}")
+    }
+
+    looperWorkerThread.quit()
+}
+
+class LooperWorkerThread : Thread("LooperWorkerThread") {
 
     private lateinit var handler: Handler
 
@@ -31,20 +38,20 @@ class LooperWorkerThread: Thread("LooperWorkerThread") {
 
     override fun run() {
         Looper.prepare()
-//        handler = Handler(Looper.myLooper()!!)
-        handler = object : Handler(Looper.myLooper()!!) {
-            override fun handleMessage(msg: Message) {
-                super.handleMessage(msg)
-                Log.e("LOG_TAG", "Looper name " + looper.thread.name)
-//                looper.thread.interrupt()
-            }
-        }
+        handler = Handler(Looper.myLooper()!!)
+//        handler = object : Handler(Looper.myLooper()!!) {
+//            override fun handleMessage(msg: Message) {
+//                super.handleMessage(msg)
+//                Log.e("LOG_TAG", "Looper name " + looper.thread.name)
+////                looper.thread.interrupt()
+//            }
+//        }
         Looper.loop()
     }
 
     fun execute(block: () -> Unit) {
         handler.post {
-            println("LOG_TAG_execute_post ${currentThread().name}")
+            Log.e("LOG_TAG", "execute ${currentThread().name}")
             block()
         }
     }

@@ -2,13 +2,12 @@ package com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThrea
 
 //TODO-URL: https://mfallahpour.medium.com/android-loopers-and-handlers-demystified-481eef1f3984
 
-//fun main() {
-//    val myThread: MyThread = MyThread()
-//    myThread.start()
-//
-//}
+fun myThread() {
+    val myThread = MyThread()
+    myThread.start()
+}
 
-class MyThread: Thread() {
+class MyThread : Thread() {
 
     override fun run() {
         someLongRunningOperation()

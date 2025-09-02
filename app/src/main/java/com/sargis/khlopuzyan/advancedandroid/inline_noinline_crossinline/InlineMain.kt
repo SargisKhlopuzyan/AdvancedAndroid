@@ -7,6 +7,7 @@ fun main() {
 fun callingFunction() {
     higherOrderInlineFunction {
         print("Non-local control flow")
+        // TODO-IMPORTANT - Non-local control flow
         return
     }
 }

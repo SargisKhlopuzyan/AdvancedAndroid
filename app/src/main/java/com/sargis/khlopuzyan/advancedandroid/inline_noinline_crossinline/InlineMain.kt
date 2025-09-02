@@ -1,10 +1,10 @@
 package com.sargis.khlopuzyan.advancedandroid.inline_noinline_crossinline
 
 fun main() {
-
+    callingFunction()
 }
 
-fun callingFunction() {
+private fun callingFunction() {
     higherOrderInlineFunction {
         print("Non-local control flow")
         // TODO-IMPORTANT - Non-local control flow

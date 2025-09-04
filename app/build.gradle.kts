@@ -65,6 +65,7 @@ dependencies {
     implementation(libs.coil.compose)
 
     implementation("androidx.compose.runtime:runtime-livedata:1.9.0")
+    implementation (libs.androidx.fragment.ktx)
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

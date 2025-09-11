@@ -1,4 +1,4 @@
-package com.sargis.khlopuzyan.advancedandroid.delegation
+package com.sargis.khlopuzyan.advancedandroid.delegation.medium
 
 import kotlin.reflect.KProperty
 

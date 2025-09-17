@@ -50,6 +50,7 @@ dependencies {
     implementation(libs.androidx.ui.tooling.preview)
     implementation(libs.androidx.material3)
 
+    // This makes possible to create/provide viewmodel in compose function
     implementation(libs.androidx.lifecycle.viewmodel.compose)
 
     // NAVIGATION
@@ -64,7 +65,7 @@ dependencies {
     // Coil
     implementation(libs.coil.compose)
 
-    implementation("androidx.compose.runtime:runtime-livedata:1.9.0")
+    implementation("androidx.compose.runtime:runtime-livedata:1.9.1")
     implementation (libs.androidx.fragment.ktx)
 
     testImplementation(libs.junit)

@@ -10,7 +10,7 @@ import kotlin.system.measureTimeMillis
 
 private val counter = AtomicInteger()
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     withContext(Dispatchers.Default) {
         massiveRun {
             counter.incrementAndGet()

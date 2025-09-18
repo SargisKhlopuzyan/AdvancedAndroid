@@ -16,7 +16,7 @@ import kotlinx.coroutines.launch
  *                          coroutine resume in whatever thread that is used by the corresponding
  *                          suspending function, without mandating any specific threading policy
  * */
-fun main() {
+private fun main() {
 
     GlobalScope.launch(Dispatchers.IO) {
 

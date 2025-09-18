@@ -1,6 +1,6 @@
 package com.sargis.khlopuzyan.advancedandroid.overview
 
-fun main() {
+private fun main() {
     val anonymousClass = object : AbstractClass1() {
         override val p1: Int = 2
 

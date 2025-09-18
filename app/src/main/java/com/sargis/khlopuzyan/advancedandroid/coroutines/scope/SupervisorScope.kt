@@ -12,7 +12,7 @@ import kotlinx.coroutines.supervisorScope
  *
  * Process finished with exit code 0
  * */
-//fun main() = runBlocking {
+//private fun main() = runBlocking {
 //    println("LOG_TAG_main_1")
 //    supervisorScope {
 //        delay(1000)
@@ -28,7 +28,7 @@ import kotlinx.coroutines.supervisorScope
  *
  * Process finished with exit code 1
  * */
-//fun main() = runBlocking {
+//private fun main() = runBlocking {
 //    println("LOG_TAG_main_1")
 //    supervisorScope {
 //        delay(1000)
@@ -46,7 +46,7 @@ import kotlinx.coroutines.supervisorScope
  *
  * Process finished with exit code 0
  * */
-//fun main() = runBlocking {
+//private fun main() = runBlocking {
 //    println("LOG_TAG_main_1")
 //    supervisorScope {
 //        delay(1000)
@@ -67,7 +67,7 @@ import kotlinx.coroutines.supervisorScope
  *
  * Process finished with exit code 0
  * */
-fun main() = runBlocking {
+private fun main() = runBlocking {
     println("LOG_TAG_main_1")
     supervisorScope {
         launch {

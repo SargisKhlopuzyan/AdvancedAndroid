@@ -4,7 +4,7 @@ import java.util.concurrent.ConcurrentLinkedQueue
 import java.util.concurrent.atomic.AtomicBoolean
 
 //TODO-URL https://mfallahpour.medium.com/android-loopers-and-handlers-demystified-481eef1f3984
-fun main() {
+private fun main() {
     val thread = CustomWorkerThread()
     thread.execute {
         // Do something

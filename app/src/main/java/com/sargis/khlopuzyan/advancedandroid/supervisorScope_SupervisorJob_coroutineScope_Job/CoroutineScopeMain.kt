@@ -7,7 +7,7 @@ import kotlinx.coroutines.runBlocking
 
 //TODO-URL : https://medium.com/@adityamishra2217/understanding-supervisorscope-supervisorjob-coroutinescope-and-job-in-kotlin-a-deep-dive-into-bcd0b80f8c6f
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     coroutineScope {
         launch {
             println("Data 1: ${getData1()}")

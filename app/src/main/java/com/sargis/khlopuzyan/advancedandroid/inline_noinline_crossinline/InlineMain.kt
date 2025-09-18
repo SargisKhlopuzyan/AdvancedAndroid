@@ -1,6 +1,6 @@
 package com.sargis.khlopuzyan.advancedandroid.inline_noinline_crossinline
 
-fun main() {
+private fun main() {
     callingFunction()
 }
 

@@ -9,7 +9,7 @@ import kotlin.system.measureTimeMillis
 
 private var counter = 0
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     withContext(Dispatchers.Default) {
         massiveRun {
             counter++

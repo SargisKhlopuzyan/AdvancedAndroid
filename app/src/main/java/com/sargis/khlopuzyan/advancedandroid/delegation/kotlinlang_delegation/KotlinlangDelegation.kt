@@ -1,6 +1,6 @@
 package com.sargis.khlopuzyan.advancedandroid.delegation.kotlinlang_delegation
 
-fun main() {
+private fun main() {
     val b = BaseImpl(10)
     val derived = Derived(b)
     derived.printMessage()

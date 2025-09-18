@@ -9,7 +9,7 @@ import kotlinx.coroutines.runBlocking
 
 //TODO-URL : https://kotlinlang.org/docs/exception-handling.html#supervision-job
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
 
     val supervisorJob = SupervisorJob()
     val coroutineScope = CoroutineScope(coroutineContext + supervisorJob)

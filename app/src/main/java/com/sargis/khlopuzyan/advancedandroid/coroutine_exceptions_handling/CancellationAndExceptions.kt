@@ -9,7 +9,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 
-//fun main() = runBlocking {
+//private fun main() = runBlocking {
 //    val job = launch {
 //        val child = launch {
 //            try {
@@ -32,7 +32,7 @@ import kotlinx.coroutines.withContext
 //}
 
 @OptIn(DelicateCoroutinesApi::class)
-fun main() = runBlocking {
+private fun main() = runBlocking {
 
     val handler = CoroutineExceptionHandler { _, exception ->
         println("CoroutineExceptionHandler got $exception")

@@ -6,7 +6,7 @@ import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     val customCoroutineScope = CoroutineScope(SupervisorJob())
     launch {
         customCoroutineScope.launch {

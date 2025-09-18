@@ -1,6 +1,6 @@
 package com.sargis.khlopuzyan.advancedandroid.delegation.medium
 
-fun main() {
+private fun main() {
     val myNameNotGood = NameDecorationNotGood("Tom")
     println(myNameNotGood.decoratedName) // Outputs: **TOM**
 

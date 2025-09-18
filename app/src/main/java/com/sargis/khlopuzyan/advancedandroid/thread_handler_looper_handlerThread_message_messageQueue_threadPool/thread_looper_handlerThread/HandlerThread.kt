@@ -4,7 +4,7 @@ import android.os.Handler
 import android.os.Looper
 import android.os.Message
 
-fun main() {
+private fun main() {
     val handlerThread = HandlerThread()
     handlerThread.start()
 

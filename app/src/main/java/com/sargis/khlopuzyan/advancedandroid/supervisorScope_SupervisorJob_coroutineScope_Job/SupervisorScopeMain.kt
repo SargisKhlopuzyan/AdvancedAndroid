@@ -4,7 +4,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.supervisorScope
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     supervisorScope {
         launch { println("Data 1: ${getData1()}") }
         launch { println("Data 2: ${getData2()}") } // Fails

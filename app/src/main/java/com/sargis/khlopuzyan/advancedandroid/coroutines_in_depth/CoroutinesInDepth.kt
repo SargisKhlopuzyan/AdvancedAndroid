@@ -10,7 +10,7 @@ import kotlinx.coroutines.runBlocking
 import kotlin.coroutines.coroutineContext
 import kotlin.system.measureTimeMillis
 
-//fun main() = runBlocking {
+//private fun main() = runBlocking {
 //    val timeMillis = measureTimeMillis {
 //        println("Fetching dashboard data...")
 //        val userDeferred = async { fetchUserData() }
@@ -25,7 +25,7 @@ import kotlin.system.measureTimeMillis
 //}
 
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     val timeMillis = measureTimeMillis {
         val dispatcher = coroutineContext[CoroutineDispatcher]
 

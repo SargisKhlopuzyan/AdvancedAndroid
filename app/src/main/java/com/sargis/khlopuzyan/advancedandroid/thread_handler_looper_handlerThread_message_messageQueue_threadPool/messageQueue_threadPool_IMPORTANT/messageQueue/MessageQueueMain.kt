@@ -1,6 +1,6 @@
 package com.sargis.khlopuzyan.advancedandroid.thread_handler_looper_handlerThread_message_messageQueue_threadPool.messageQueue_threadPool_IMPORTANT.messageQueue
 
-fun main() {
+private fun main() {
     val messageQueue = MessageQueue()
     //start the looping
     messageQueue.run()

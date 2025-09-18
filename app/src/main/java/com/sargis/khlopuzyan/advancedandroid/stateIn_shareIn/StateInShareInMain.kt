@@ -7,7 +7,7 @@ import kotlinx.coroutines.flow.shareIn
 import kotlinx.coroutines.flow.stateIn
 import kotlinx.coroutines.runBlocking
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     val stateFlow = returnsFlow().stateIn(this, SharingStarted.Lazily, 0)
     val sharedFlow = returnsFlow().shareIn(this, SharingStarted.Lazily)
 }

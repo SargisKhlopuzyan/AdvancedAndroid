@@ -10,7 +10,7 @@ import kotlinx.coroutines.runBlocking
  * LOG_TAG_coroutineScope_1
  * LOG_TAG_main_2
  * */
-//fun main() = runBlocking {
+//private fun main() = runBlocking {
 //    println("LOG_TAG_main_1")
 //    coroutineScope {
 //        delay(1000)
@@ -25,7 +25,7 @@ import kotlinx.coroutines.runBlocking
  * LOG_TAG_coroutineScope_launch_2
  * LOG_TAG_main_2
  * */
-//fun main() = runBlocking {
+//private fun main() = runBlocking {
 //    println("LOG_TAG_main_1")
 //    coroutineScope {
 //        launch {
@@ -46,7 +46,7 @@ import kotlinx.coroutines.runBlocking
  * LOG_TAG_coroutineScope_launch_1
  * Exception in thread "main" java.lang.Exception: LOG_TAG_coroutineScope_launch_1
  * */
-fun main() = runBlocking {
+private fun main() = runBlocking {
     println("LOG_TAG_main_1")
     coroutineScope {
         launch {

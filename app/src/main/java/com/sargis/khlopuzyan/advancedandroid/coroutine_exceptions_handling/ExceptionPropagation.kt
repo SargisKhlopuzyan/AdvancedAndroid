@@ -7,7 +7,7 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 
 @OptIn(DelicateCoroutinesApi::class)
-fun main() = runBlocking {
+private fun main() = runBlocking {
 
     val job = GlobalScope.launch { // root coroutine with launch
         println("LOG_TAG Throwing exception from launch")

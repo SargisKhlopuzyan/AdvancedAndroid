@@ -6,7 +6,7 @@ import kotlinx.coroutines.channels.consumeEach
 import kotlinx.coroutines.channels.produce
 import kotlinx.coroutines.runBlocking
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     val squares = produceSquares()
     squares.consumeEach {
         println(it)

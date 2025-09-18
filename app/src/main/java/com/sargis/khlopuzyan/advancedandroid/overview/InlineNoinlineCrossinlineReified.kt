@@ -2,7 +2,7 @@ package com.sargis.khlopuzyan.advancedandroid.overview
 
 //TODO-URL : https://www.youtube.com/watch?v=8i-_z__AEsw
 
-fun main() {
+private fun main() {
     saveAllData("AA", "BBB", "CCCC", "DDDDD")
 
     myGenericType(String::class.java)

@@ -2,7 +2,7 @@ package com.sargis.khlopuzyan.advancedandroid.double_colon_operator
 
 import kotlin.reflect.KClass
 
-fun main() {
+private fun main() {
     val customClass = CustomClass("MyName")
 
     val result1: KClass<out KClass<CustomClass>> = classReference::class

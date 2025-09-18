@@ -19,7 +19,7 @@ val handler = CoroutineExceptionHandler { coroutineContext, throwable ->
 
 val customCoroutineContext = CoroutineName("CustomCoroutineContext") + Job() + Dispatchers.Unconfined + handler
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     println("LOG_TAG_main_1 thread: ${Thread.currentThread().name}")
     val job = this.coroutineContext[Job]
 //    withContext(Dispatchers.IO) {

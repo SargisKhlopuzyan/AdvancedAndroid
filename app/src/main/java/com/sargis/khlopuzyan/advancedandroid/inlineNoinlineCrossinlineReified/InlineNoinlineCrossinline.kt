@@ -1,7 +1,7 @@
 package com.sargis.khlopuzyan.advancedandroid.inlineNoinlineCrossinlineReified
 
 //TODO-URL: https://www.youtube.com/watch?v=8i-_z__AEsw&ab_channel=SagarMalhotra
-fun main() {
+private fun main() {
     saveAllData("Sargis", "Android", "X", "B")
 }
 

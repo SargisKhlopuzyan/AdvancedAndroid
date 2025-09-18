@@ -3,7 +3,7 @@ package com.sargis.khlopuzyan.advancedandroid.coroutine_exceptions_handling
 import kotlinx.coroutines.*
 
 @OptIn(DelicateCoroutinesApi::class)
-fun main() = runBlocking {
+private fun main() = runBlocking {
 
     val handler = CoroutineExceptionHandler { _, exception ->
         println("CoroutineExceptionHandler got $exception")

@@ -29,7 +29,7 @@ package com.sargis.khlopuzyan.advancedandroid.solid
  *      Instead, both should depend on abstractions.
  *      Additionally, abstractions should not depend on details; details should depend on abstractions.
  * */
-fun main() {
+private fun main() {
 
 }
 

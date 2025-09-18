@@ -12,7 +12,7 @@ private val counterContext = Dispatchers.Default.limitedParallelism(1)
 
 private var counter = 0
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     withContext(Dispatchers.Default) {
         massiveRun {
             // confine each increment to a single-threaded context

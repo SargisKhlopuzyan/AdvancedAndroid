@@ -1,6 +1,6 @@
 package com.sargis.khlopuzyan.advancedandroid.inlineNoinlineCrossinlineReified
 
-fun main() {
+private fun main() {
     genericFunction(ReifiedClass::class.java)
 }
 

@@ -8,7 +8,7 @@ import kotlin.concurrent.thread
 import kotlin.coroutines.resume
 import kotlin.coroutines.suspendCoroutine
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     suspendCoroutineFunction()
 
     coroutineScope {

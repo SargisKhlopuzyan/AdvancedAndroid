@@ -12,7 +12,7 @@ import kotlinx.coroutines.withContext
 import java.io.IOException
 
 @OptIn(DelicateCoroutinesApi::class)
-fun main() = runBlocking {
+private fun main() = runBlocking {
 
     val handler = CoroutineExceptionHandler { _, exception ->
         println("CoroutineExceptionHandler got $exception")
@@ -44,7 +44,7 @@ fun main() = runBlocking {
 }
 
 @OptIn(DelicateCoroutinesApi::class)
-fun main2() = runBlocking {
+private fun main2() = runBlocking {
     val handler = CoroutineExceptionHandler { _, exception ->
         println("CoroutineExceptionHandler got $exception")
     }

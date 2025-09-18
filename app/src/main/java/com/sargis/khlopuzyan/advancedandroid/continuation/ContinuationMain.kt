@@ -10,7 +10,7 @@ import kotlin.coroutines.resumeWithException
 //TODO-DO-AGAIN
 //TODO-URL : https://stackoverflow.com/questions/73679497/how-does-continuation-work-in-kotlin-coroutine
 
-fun main() {
+private fun main() {
 
 }
 /**

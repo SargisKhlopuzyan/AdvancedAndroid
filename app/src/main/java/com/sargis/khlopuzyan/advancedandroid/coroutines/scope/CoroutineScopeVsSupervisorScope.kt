@@ -10,7 +10,7 @@ import kotlinx.coroutines.supervisorScope
  * coroutineScope cancels everything if one child coroutine fails,
  * while supervisorScope keeps going even if a child fails.
  * */
-fun main() = runBlocking {
+private fun main() = runBlocking {
 
     try {
             supervisorScope {

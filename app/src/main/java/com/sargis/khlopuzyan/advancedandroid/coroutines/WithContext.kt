@@ -15,7 +15,7 @@ import kotlinx.coroutines.runBlocking
  * LOG_TAG_withContext
  * LOG_TAG_main_2
  * */
-//fun main() = runBlocking {
+//private fun main() = runBlocking {
 //    println("LOG_TAG_main_1")
 //    withContext(Dispatchers.IO) {
 //        delay(1000)
@@ -29,7 +29,7 @@ import kotlinx.coroutines.runBlocking
  * LOG_TAG_withContext_launch
  * LOG_TAG_main_2
  * */
-//fun main() = runBlocking {
+//private fun main() = runBlocking {
 //    println("LOG_TAG_main_1")
 //    withContext(Dispatchers.IO) {
 //        launch {
@@ -45,7 +45,7 @@ import kotlinx.coroutines.runBlocking
  * LOG_TAG_main_2
  * LOG_TAG_launch
  * */
-//fun main() = runBlocking {
+//private fun main() = runBlocking {
 //    println("LOG_TAG_main_1")
 //    launch(Dispatchers.IO) {
 //        delay(1000)
@@ -59,7 +59,7 @@ import kotlinx.coroutines.runBlocking
  * LOG_TAG_launch.join()
  * LOG_TAG_main_2
  * */
-fun main() = runBlocking {
+private fun main() = runBlocking {
     println("LOG_TAG_main_1")
     launch(Dispatchers.IO) {
         delay(1000)

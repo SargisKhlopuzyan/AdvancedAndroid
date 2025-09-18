@@ -6,7 +6,7 @@ import kotlinx.coroutines.runBlocking
 import kotlinx.coroutines.withContext
 import kotlinx.coroutines.yield
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     val singleThreadDispatcher = Dispatchers.Default.limitedParallelism(1)
     withContext(singleThreadDispatcher) {
         launch {

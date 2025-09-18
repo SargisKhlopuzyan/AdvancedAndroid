@@ -26,7 +26,7 @@ class LooperThread : Thread("Custom Thread") {
     }
 }
 
-fun main() {
+private fun main() {
     // We can communicate and post to this LooperThread by using Handler instance from main thread.
     val looperThread = LooperThread()
     looperThread.handler.sendEmptyMessage(100)

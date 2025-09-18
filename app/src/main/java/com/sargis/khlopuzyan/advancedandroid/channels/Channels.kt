@@ -3,7 +3,7 @@ package com.sargis.khlopuzyan.advancedandroid.channels
 import kotlinx.coroutines.*
 import kotlinx.coroutines.channels.*
 
-fun main1() = runBlocking {
+private fun main1() = runBlocking {
     val channel = Channel<Int>()
     launch {
         // this might be heavy CPU-consuming computation or async logic,
@@ -15,7 +15,7 @@ fun main1() = runBlocking {
     println("Done!")
 }
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     val channel = Channel<Int>()
     launch {
         for (x in 1..5) channel.send(x * x)

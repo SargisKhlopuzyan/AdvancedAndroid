@@ -1,6 +1,6 @@
 package com.sargis.khlopuzyan.advancedandroid.sealedClass
 
-fun main() {
+private fun main() {
 //    val sealedClass = SealedClass() // Error - Cannot access 'constructor(): SealedClass': it is protected
 //    val sealedClass = object : SealedClass() // Error - Anonymous object cannot extend a sealed class.
 

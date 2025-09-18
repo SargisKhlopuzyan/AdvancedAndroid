@@ -8,7 +8,7 @@ import kotlinx.coroutines.yield
 
 //TODO-URL : https://kotlinlang.org/docs/exception-handling.html#supervision-scope
 
-fun main() = runBlocking {
+private fun main() = runBlocking {
     try {
         supervisorScope {
             val child = launch {

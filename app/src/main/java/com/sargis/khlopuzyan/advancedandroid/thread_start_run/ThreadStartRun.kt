@@ -11,7 +11,7 @@ import kotlinx.coroutines.runBlocking
  * LOG_TAG_run_i: 0, name: DefaultDispatcher-worker-1
  * ...
  * */
-fun main() = runBlocking {
+private fun main() = runBlocking {
     val myThread = MyThread()
     launch(Dispatchers.Default) {
         launch {

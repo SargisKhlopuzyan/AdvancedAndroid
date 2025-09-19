@@ -10,6 +10,7 @@ import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.viewmodel.compose.viewModel
+import com.sargis.khlopuzyan.advancedandroid.overview.EffectHandlerTestScreen
 import com.sargis.khlopuzyan.advancedandroid.savedStateHandle.MyViewModel
 import com.sargis.khlopuzyan.advancedandroid.ui.MainNavigation
 import com.sargis.khlopuzyan.advancedandroid.ui.theme.AdvancedAndroidTheme
@@ -21,9 +22,7 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        /**
-        workManager = WorkManager.getInstance(applicationContext)
-         */
+//        workManager = WorkManager.getInstance(applicationContext)
 
 //        val factory = object : ViewModelProvider.Factory {
 //            override fun <T : ViewModel> create(modelClass: Class<T>): T {
@@ -85,7 +84,8 @@ class MainActivity : ComponentActivity() {
                 }
                  */
 
-                MainNavigation()
+//                MainNavigation()
+                EffectHandlerTestScreen()
             }
         }
 //        finish()

@@ -45,6 +45,6 @@ fun LaunchedEffectMain() {
 }
 
 fun Context.showToast(text: CharSequence) {
-    Toast.makeText(this, text, Toast.LENGTH_SHORT).show()
+    Toast.makeText(this, text, Toast.LENGTH_LONG).show()
 }
 

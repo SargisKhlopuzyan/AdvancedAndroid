@@ -19,7 +19,6 @@ import androidx.lifecycle.viewmodel.compose.viewModel
 
 @Composable
 fun MyCompose() {
-
 //    val myViewModel: MyViewModel = MyViewModel()
 //    val myViewModel: MyViewModel = viewModel<MyViewModel>()
     val myViewModel: MyViewModel = viewModel<MyViewModel>(

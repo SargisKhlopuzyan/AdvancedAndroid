@@ -6,22 +6,34 @@ import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
 import androidx.activity.viewModels
-import androidx.lifecycle.SavedStateHandle
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
-import androidx.lifecycle.viewmodel.compose.viewModel
+import androidx.lifecycle.lifecycleScope
 import com.sargis.khlopuzyan.advancedandroid.overview.EffectHandlerTestScreen
-import com.sargis.khlopuzyan.advancedandroid.savedStateHandle.MyViewModel
-import com.sargis.khlopuzyan.advancedandroid.ui.MainNavigation
+import com.sargis.khlopuzyan.advancedandroid.overview.MyViewModel
 import com.sargis.khlopuzyan.advancedandroid.ui.theme.AdvancedAndroidTheme
 import com.sargis.khlopuzyan.advancedandroid.workManager.PhotoViewModel
 
 class MainActivity : ComponentActivity() {
+
     //    private lateinit var workManager: WorkManager
     private val viewModel by viewModels<PhotoViewModel>()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        val factory = object : ViewModelProvider.Factory {
+            override fun <T : ViewModel> create(modelClass: Class<T>): T {
+
+                return super.create(modelClass)
+            }
+        }
+        val vmp = ViewModelProvider(owner = this, factory = factory)
+
+        val vm = vmp.get(MyViewModel::class.java)
+
+
+        lifecycleScope
 //        workManager = WorkManager.getInstance(applicationContext)
 
 //        val factory = object : ViewModelProvider.Factory {

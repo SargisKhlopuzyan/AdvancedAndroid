@@ -65,7 +65,7 @@ dependencies {
     // Coil
     implementation(libs.coil.compose)
 
-    implementation("androidx.compose.runtime:runtime-livedata:1.9.1")
+    implementation(libs.androidx.runtime.livedata)
     implementation (libs.androidx.fragment.ktx)
 
     testImplementation(libs.junit)
@@ -75,4 +75,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+}
+
+tasks.register("simpleTask") {
+    println("*** simple ***")
 }

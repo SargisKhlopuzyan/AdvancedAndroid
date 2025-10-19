@@ -33,7 +33,6 @@ import kotlinx.coroutines.flow.mapNotNull
 import kotlinx.coroutines.isActive
 import kotlinx.coroutines.launch
 
-
 @Composable
 fun EffectHandlerTestScreen() {
 

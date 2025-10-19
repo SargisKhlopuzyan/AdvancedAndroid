@@ -6,9 +6,14 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
+import androidx.lifecycle.viewModelScope
 import java.util.UUID
 
 class PhotoViewModel : ViewModel() {
+
+    init {
+        viewModelScope
+    }
 
     var uncompressedUri: Uri? by mutableStateOf(null)
         private set
@@ -33,4 +38,5 @@ class PhotoViewModel : ViewModel() {
         println("PhotoViewModel -> updateWorkId")
         workId = uuId
     }
+
 }

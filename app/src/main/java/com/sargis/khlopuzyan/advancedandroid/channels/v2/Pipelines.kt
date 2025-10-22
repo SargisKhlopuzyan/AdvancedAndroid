@@ -1,7 +1,10 @@
 package com.sargis.khlopuzyan.advancedandroid.channels.v2
 
-import kotlinx.coroutines.*
-import kotlinx.coroutines.channels.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.cancelChildren
+import kotlinx.coroutines.channels.ReceiveChannel
+import kotlinx.coroutines.channels.produce
+import kotlinx.coroutines.runBlocking
 
 private fun main() = runBlocking {
     var cur = numbersFrom(2)
@@ -10,7 +13,6 @@ private fun main() = runBlocking {
         println(prime)
         cur = filter(cur, prime)
     }
-    Dispatchers.Default
     coroutineContext.cancelChildren() // cancel all children to let main finish
 }
 
